@@ -16,6 +16,3 @@ steps:
     args: ["-m", "pytest", "-s", "dags/"]
 
 timeout: '600s'
-
-options:
-  logsBucket: "gs://buildlogs-20240907"  # Especifica o bucket onde os logs serão armazenados
