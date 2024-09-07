@@ -5,11 +5,6 @@ steps:
     entrypoint: pip
     args: ["install", "-r", "requirements.txt", "-c", "constraints.txt", "--user"]
 
-  # Etapa 2: Instalar dependências para os testes de unidade
-  - name: python:3.8-slim
-    entrypoint: pip
-    args: ["install", "-r", "requirements-test.txt", "--user"]
-
   # Etapa 3: Executar testes nos DAGs usando pytest
   - name: python:3.8-slim
     entrypoint: python3.8
