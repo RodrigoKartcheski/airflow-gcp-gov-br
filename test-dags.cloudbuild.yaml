@@ -14,21 +14,25 @@
 # [START composer_cicd_unittest_yaml]
 
 steps:
-  # install dependencies
+  # Etapa 0: Atualizar pip, setuptools e wheel
+  - name: python:3.8-slim
+    entrypoint: pip
+    args: ["install", "--upgrade", "pip", "setuptools", "wheel", "--user"]
+    
+  # Etapa 1: Instalar dependências dos DAGs
   - name: python:3.8-slim
     entrypoint: pip
     args: ["install", "-r", "requirements.txt", "-c", "constraints.txt", "--user"]
   
+  # Etapa 2: Instalar dependências para testes de unidade
   - name: python:3.8-slim
     entrypoint: pip
     args: ["install", "-r", "requirements-test.txt", "--user"]
 
-  # run in python 3.8 which is latest version in Cloud Composer
+  # Etapa 3: Executar testes nos DAGs usando pytest
   - name: python:3.8-slim
     entrypoint: python3.8
     args: ["-m", "pytest", "-s", "dags/"]
-
-# [END composer_cicd_unittest_yaml]
 
 options:
   logging: CLOUD_LOGGING_ONLY
