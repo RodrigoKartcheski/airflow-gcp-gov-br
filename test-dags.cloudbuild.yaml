@@ -1,4 +1,3 @@
-#01
 steps:
   # Etapa 1: Instalar dependências dos DAGs
   - name: python:3.8-slim
@@ -18,4 +17,4 @@ steps:
 timeout: '600s'
 
 options:
-  logging_options: "CLOUD_LOGGING_ONLY
+  logging_options: "CLOUD_LOGGING_ONLY"
