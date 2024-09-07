@@ -16,3 +16,6 @@ steps:
     args: ["-m", "pytest", "-s", "dags/"]
 
 timeout: '600s'
+
+options:
+  logging_options: "CLOUD_LOGGING_ONLY
