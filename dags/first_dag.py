@@ -1,5 +1,6 @@
 # first_dag.py
 import datetime
+import pandas as pd
 
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
