@@ -2,7 +2,7 @@
 
 
 
-![Banner](idownload.jpeg)
+![Banner](./idownload.jpeg)
 
 Code in this directory is part of a tutorial found [in the Cloud docs](https://cloud.google.com/composer/docs/composer-2/dag-cicd-github). In this tutorial, you will learn how to use Cloud Build to sync DAGs from version control with your Cloud Composer environment.
 
